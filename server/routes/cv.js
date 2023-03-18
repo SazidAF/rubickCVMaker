@@ -1,11 +1,11 @@
 import express from 'express';
-import { createPost, updatePost, deletePost, likePost} from '../controllers/postController.js';
+import { createCV, updateCV, deleteCV} from '../controllers/cv.js';
 import auth from '../middlewares/auth.js';
 const router = express.Router();
 
-router.post("/", auth, createPost);
-router.patch("/:id", auth, updatePost);
-router.delete("/:id", auth, deletePost);
+router.post("/:id", auth, createCV);
+router.patch("/:id", auth, updateCV);
+router.delete("/:id", auth, deleteCV);
 
 export default router;
 

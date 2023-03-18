@@ -4,7 +4,8 @@ import { GoogleOAuthProvider } from '@react-oauth/google';
 import "./App.css";
 import Auth from './components/Auth/Auth';
 import Home from './components/home'
-import CV from './components/Templates/CV';
+import CV from './components/CVform/CVform';
+import Template from './components/Templates/CV';
 
 const App = () => {
   return (
@@ -13,7 +14,8 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home/>} ></Route>
           <Route path='/auth' exact Component={Auth} />
-          <Route path='/template' exact Component={CV} />
+          <Route path='/cv' exact Component={CV} />
+          <Route path='/template-maker' exact Component={Template} />
         </Routes>
       </BrowserRouter>
     </GoogleOAuthProvider>

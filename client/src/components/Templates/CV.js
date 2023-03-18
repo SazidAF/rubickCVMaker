@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
-import { Grid, LinearProgress, Paper, Container} from '@material-ui/core';
+import { Grid, LinearProgress, Paper, Container, Button} from '@material-ui/core';
 import ReactPDF, { Page, Document, StyleSheet, View} from '@react-pdf/renderer';
 import { Rnd } from 'react-rnd';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { PDFViewer } from '@react-pdf/renderer';
 
 import MyDocument from './Document/Document';
@@ -10,6 +10,7 @@ import MyDocument from './Document/Document';
 import useStyles from './styles';
 
 const CV = () => {
+  const dispatch = useDispatch();
     const [blocks, setBlocks] = useState([
     { id: 1, text: 'Item 1', x: 30, y: 100},
     { id: 2, text: 'Item 2' , x: 30, y: 200},
@@ -19,15 +20,23 @@ const CV = () => {
     { id: 6, text: 'Item 6' , x: 30, y: 600},
   ]);
 
+  const handleChange = (e) => {
+    
+    console.log(blocks);
+  }
+
     const classes = useStyles();
     return (
         <Container>
           <Grid className={classes.mainContainer} container justify-content="space-between" spacing={3}>
             <Grid item xs={12} sm={7}>
                   <MyDocument blocks={blocks} setBlocks={setBlocks}/>
+                  <Button type="Button" fullWidth variant='contained' color='primary' className={classes.submit} onClick={handleChange}>
+                      Save
+                  </Button>
             </Grid>
             <Grid item xs={12} sm={4}>
-              <PDFViewer style={{height: "600px", width: "400px"}}>
+            <PDFViewer style={{height: "600px", width: "400px", marginTop: "70px"}}>
                   <MyDocument blocks={blocks} setBlocks={setBlocks}/>
               </PDFViewer>
             </Grid>
