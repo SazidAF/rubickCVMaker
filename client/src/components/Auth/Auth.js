@@ -29,21 +29,23 @@ const Auth = () => {
         e.preventDefault();
 
         if(isSignUp) {
-
+            dispatch(signup(formData, history));
         } else {
-
+            dispatch(signin(formData, history));
         }
     }
     const googleSuccess = async (res) => {
         const token = res.credential;
         const result = jwt_decode(res.credential);
+        // const result = res?.profileObj;
+        // const token = res?.tokenId;
     
         try {
             dispatch({
                 type: AUTH,
                 data: {result, token}
             });
-            console.log(result);
+
             history('/');
         } catch (error) {
             console.log(error);
@@ -110,4 +112,5 @@ const Auth = () => {
 };
 
 export default Auth
+
 
