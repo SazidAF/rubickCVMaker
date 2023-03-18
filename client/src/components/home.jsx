@@ -1,7 +1,11 @@
 import React, {useState} from 'react';
 import Footer from './LandingPage/Footer/FooterIndex';
 import Sidebar from './LandingPage/Sidebar/SideIndex';
-import Navbar from './LandingPage/Navbar/NavIndex'
+import Navbar from './LandingPage/Navbar/NavIndex';
+import MainSection from './LandingPage/MainSection/MainIndex'
+import InfoSection from './LandingPage/InfoSection/InfoIndex';
+import { homeObjFour, homeObjOne, homeObjThree, homeObjTwo } from './LandingPage/InfoSection/data';
+
 const Home = () => {
     const [isOpen, setIsOpen] = useState(false)
     const toggle = () => {
@@ -11,6 +15,10 @@ const Home = () => {
         <>
             <Sidebar isOpen={isOpen} toggle={toggle} />
             <Navbar toggle={toggle}/>
+            <MainSection/>
+            <InfoSection {...homeObjOne}/>
+            <InfoSection {...homeObjTwo}/>
+            <InfoSection {...homeObjFour}/>
             <Footer></Footer>
         </>
     );
