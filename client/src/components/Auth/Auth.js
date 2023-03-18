@@ -10,6 +10,7 @@ import Icon from './Icon';
 // Custom Component for input
 import Input from './Input';
 import { signup, signin } from '../../actions/auth';
+import '../../App.css';
 
 import { AUTH } from '../../constants/actionTypes';
 
@@ -72,7 +73,7 @@ const Auth = () => {
     return (
         <Container component="main" maxWidth="xs">
             <Paper className={classes.paper} elevation={3}>
-                <Avatar className={classes.avatar}>
+                <Avatar className={classes.avatar} color='#E96479'>
                     <LockOutlinedIcon />
                 </Avatar> 
                 <Typography variant='h5'>{isSignUp ? 'Sign Up' : 'Sign In'}</Typography>
