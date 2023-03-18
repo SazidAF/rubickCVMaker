@@ -33,7 +33,7 @@ const Footer = () => {
                 </FooterLinksContainer>
                 <Socialmedia>
                     <SocialmediaWrap>
-                        <SocialLogo to=''>CVirtual</SocialLogo>
+                        {/* <SocialLogo to=''>CVirtual</SocialLogo> */}
                         <WebsiteRights>CVirtual © {new Date().getFullYear()} All rights reserved.</WebsiteRights>
                         <SocialIcon>
                         <SocialIconLink href="/" target="_blank" aria-label="Facebook"><FaFacebook/></SocialIconLink> 
