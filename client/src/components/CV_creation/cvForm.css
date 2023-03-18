@@ -13,25 +13,25 @@
 .checkbox {
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    /* align-items: center; */
     margin-top: 1rem;
 }
 
 nav {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center; */
+    /* align-items: center; */
     margin-bottom: 2rem;
 }
 
 nav h3 {
     margin: 1rem;
     cursor: pointer;
-    color: #718096;
+
 }
 
 nav h3:hover {
-    color: white;
+    color: rgb(79, 157, 230);
 }
 
 form {
@@ -97,17 +97,4 @@ select.input-error {
 
 button:disabled {
     opacity: 0.35;
-}
-
-.card-box {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    gap: 1rem !important;
-    padding: 1rem !important;
-    border: 1px solid #ccc !important;
-    border-radius: 0.5rem !important;
-}
-
-.card-box>* {
-    flex: 1 1 25% !important;
 }

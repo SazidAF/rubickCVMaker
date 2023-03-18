@@ -6,8 +6,8 @@ import CustomSelect from "./CustomSelect";
 import Card from "./card";
 
 const onSubmit = async (values, actions) => {
+  console.log(values, actions);
   await new Promise((resolve) => setTimeout(resolve, 6000));
-  console.log(values);
   actions.resetForm();
 };
 

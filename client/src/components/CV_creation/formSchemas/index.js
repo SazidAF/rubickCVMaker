@@ -30,3 +30,20 @@ export const advancedSchema = yup.object().shape({
   //     .boolean()
   //     .oneOf([true], "Please accept the terms of service"),
 });
+
+export const contactSchema = yup.object().shape({
+  email: yup.string().email("Please enter a valid email").required("Required"),
+  firstName: yup
+    .string()
+    .min(3, "User first name must be at least 3 characters long")
+    .required("Required"),
+  lastName: yup.string().required("Required"),
+  phone: yup.string().required("Required"),
+  address: yup.string().required("Required"),
+});
+
+export const educationSchema = yup.object().shape({
+  institute: yup.string().required("Required"),
+  degree: yup.string().required("Required"),
+  description: yup.string().required("Required"),
+});
