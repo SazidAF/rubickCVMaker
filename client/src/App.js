@@ -1,16 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import Home from "./pages";
+import react from 'react';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import { GoogleOAuthProvider } from '@react-oauth/google';
 
-function App() {
+import Auth from './components/Auth/Auth';
+
+const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route exact path="/" component={Home}  />
-      </Routes>
-    </Router>
+    <GoogleOAuthProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/auth' exact Component={Auth} />
+        </Routes>
+      </BrowserRouter>
+    </GoogleOAuthProvider>
   );
 }
 
