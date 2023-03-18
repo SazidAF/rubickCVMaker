@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useState, useRef } from "react";
+import { useState} from "react";
 import { Rnd } from "react-rnd";
 
 const Template = ({block, handleUpdateBlocks}) => {
@@ -30,16 +30,15 @@ const Template = ({block, handleUpdateBlocks}) => {
 
 
   return (
-    <div>
       <Rnd
         default={{
-          x: 234,
-          y: 0,
-          width: 120,
-          height: 100,
+          x: block.layerx,
+          y: block.layery,
+          width: 130,
+          height: 55,
         }}
-        minWidth={500}
-        minHeight={190}
+        minWidth={200}
+        minHeight={55}
         bounds="window"
         resizable={{
           top: true,
@@ -50,16 +49,15 @@ const Template = ({block, handleUpdateBlocks}) => {
           bottomRight: true,
           bottomLeft: true,
           topLeft: true,
-        }}>
+        }} onDragStop={(e) => console.log(e)} onResizeStop={(e)=> console.log(e)}>
         <div
           style={{
             backgroundColor: "cyan",
             width: "100%",
-            height: "100%",
-            margin: "100px",
+            height: "60%",
           }}>
           {isEditing ? (
-            <input type="text" value={text} onChange={handleTextChange} />
+            <input type="textbox" value={text} onChange={handleTextChange} />
           ) : (
             <p onClick={handlePCick}>{text}</p>
           )}
@@ -67,7 +65,6 @@ const Template = ({block, handleUpdateBlocks}) => {
         </div>
       </Rnd>
      
-    </div>
   );
 };
 
