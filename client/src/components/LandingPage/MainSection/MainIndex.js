@@ -23,7 +23,7 @@ const MainSection = () => {
                 </MainP>
                 <MainBtnWrapper>
                     <MyButton to='/' onMouseEnter={onHover} onMouseLeave={onHover}  >
-                        Get started 
+                        Build My CV
                          {/* {(hover ? <ArrowForward /> : ArrowRight />)}; */}
                     </MyButton>
                 </MainBtnWrapper>
