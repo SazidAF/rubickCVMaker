@@ -93,3 +93,13 @@ export const Img = styled.img`
    padding-right: 0;
     
 `;
+
+export const CardBtn = styled.button`
+    background-color: transparent;
+    border: 0ch;
+   &:hover{
+    transition: all 0.2s ease-in-out;
+    background-color: #4D455D;
+    border-radius:10px;
+}
+`;

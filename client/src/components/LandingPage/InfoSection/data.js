@@ -54,3 +54,37 @@ export const homeObjFour = {
     primary:false,
     darkText: true
 }
+
+export const homeObjFive = {
+    id: 'experience',
+    lightBg: true,
+    lightText: false,
+    topLine: 'help us choose best templates for you ',
+    headline: 'Tell us about your work experience',
+    // description: 'Read blogs written by experts on tips and tricks of making CV.',
+    buttonLabel1: 'Next',
+    buttonLabel2: 'Back',
+    imgStart: true,
+    img: require('../../../images/work2.jpg'),
+    alt: 'Blogs',
+    dark: false,
+    primary:false,
+    darkText: true,
+}
+
+export const homeObjSix = {
+    id: 'education',
+    lightBg: true,
+    lightText: false,
+    topLine: 'help us choose best templates for you ',
+    headline: 'What is your education level',
+    // description: 'Read blogs written by experts on tips and tricks of making CV.',
+    buttonLabel1: 'Next',
+    buttonLabel2: 'Back',
+    imgStart: true,
+    img: require('../../../images/education.png'),
+    alt: 'Blogs',
+    dark: false,
+    primary:false,
+    darkText: true,
+}
