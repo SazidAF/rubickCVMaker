@@ -21,15 +21,17 @@ const Template = ({block, handleUpdateBlocks}) => {
   const handleSaveClick = () => {
     setIsEditing(false);
     if(currentID) {
-      handleUpdateBlocks(currentID, text,);
+      handleUpdateBlocks(currentID,{text: text, x: position.x, y:position.y});
     }
   };
 
 
   const handleDragStop = (event, data) => {
+    setIsEditing(true);
     setPosition({x: data.x, y: data.y});
   };
   const handleResizeStop = (event, direction, ref, delta, position) => {
+    setIsEditing(true);
     setPosition({x: position.x, y: position.y});
   };
 
@@ -46,9 +48,9 @@ const Template = ({block, handleUpdateBlocks}) => {
           width: 130,
           height: 55,
         }}
-        minWidth={200}
+        minWidth={700}
         minHeight={55}
-        bounds="window"
+        bounds="div"
         resizable={{
           top: true,
           right: true,
@@ -66,7 +68,7 @@ const Template = ({block, handleUpdateBlocks}) => {
             height: "60%",
           }}>
           {isEditing ? (
-            <input type="textbox" value={text} onChange={handleTextChange} />
+            <input type="textbox" value={text} onChange={handleTextChange} style={{width: "400px", height: "40px"}}/>
           ) : (
             <p onClick={handlePCick}>{text}</p>
           )}

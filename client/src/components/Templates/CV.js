@@ -12,6 +12,8 @@ const Posts = () => {
     { id: 2, text: 'Item 2' , x: 0, y: 200},
     { id: 3, text: 'Item 3', x: 0, y: 300},
     { id: 4, text: 'Item 4' , x: 0, y: 400},
+    { id: 5, text: 'Item 5' , x: 0, y: 500},
+    { id: 6, text: 'Item 6' , x: 0, y: 600},
   ]);
 
     const handleUpdateBlocks = (id, block) => {
@@ -33,6 +35,7 @@ const Posts = () => {
             </Grid>
             <Grid item xs={12} sm={4}>
             <Paper>
+            <div style={{height: "800px", paddingTop: "10px", position: 'relative', top: 20}}>
             {!blocks.length? <LinearProgress /> : (
                 <Grid className={classes.container} container alignItems='stretch' spacing={3}>
                     <Grid  container item xs={12} sm={6}>
@@ -42,6 +45,7 @@ const Posts = () => {
                     </Grid>
                 </Grid>
             )}
+            </div>
             </Paper>
             </Grid>
           </Grid>
