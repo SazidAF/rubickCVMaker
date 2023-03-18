@@ -12,6 +12,14 @@ API.interceptors.request.use((req) => {
   return req;
 });
 
-export const signIn = (formData) => API.post("/user/signin", formData);
-export const signUp = (formData) => API.post("/user/signup", formData);
+
+export const createCV = (newCV) => API.post('/CV', newCV);
+export const updateCV = (id, updatedCV) => API.patch(`/CV/${id}`, updatedCV);
+export const deleteCV = (id) => API.delete(`/CV/${id}`);
+
+
+export const signIn = (formData) => API.post('/user/signin', formData);
+export const signUp = (formData) => API.post('/user/signup', formData);
+
 export const educationInfo = (values) => API.post("/user/form", values);
+

@@ -4,6 +4,9 @@ import { GoogleOAuthProvider } from '@react-oauth/google';
 import "./App.css";
 import Auth from './components/Auth/Auth';
 import Home from './components/home'
+=import CV from './components/CVform/CVform';
+import Template from './components/Templates/CV';
+
 import Dashboard from './components/dashboard';
 import Experience 
  from './components/experience';
@@ -17,6 +20,8 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home/>} ></Route>
           <Route path='/auth' exact Component={Auth} />
+          <Route path='/cv' exact Component={CV} />
+          <Route path='/template-maker' exact Component={Template} />
           <Route path="/dashboard" element={<Dashboard/>} ></Route>
           <Route path="/experience" element={<Experience/>} ></Route>
           <Route path="/education" element={<Education/>} ></Route>
