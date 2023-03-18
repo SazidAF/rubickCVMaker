@@ -22,7 +22,7 @@ const MainSection = () => {
                 Online CV maker 
                 </MainP>
                 <MainBtnWrapper>
-                    <MyButton to='/' onMouseEnter={onHover} onMouseLeave={onHover}  >
+                    <MyButton to='/experience' onMouseEnter={onHover} onMouseLeave={onHover}  >
                         Build My CV
                          {/* {(hover ? <ArrowForward /> : ArrowRight />)}; */}
                     </MyButton>
