@@ -6,7 +6,7 @@ const authReducer = (state, action) => {
         case AUTH:
         case LOGOUT:
         default:
-           return state;  // always needs to return something
+           return null;  // always needs to return something
     }
 }
 
