@@ -5,7 +5,8 @@ import { Rnd } from "react-rnd";
 const Template = ({block, handleUpdateBlocks}) => {
   const [text, setText] = useState(block.text);
   const [currentID, setCurrentID] = useState(null);
-  const [isEditing, setIsEditing] = useState(false);
+  const [isEditing, setIsEditing] = useState(false);  
+  const [position, setPosition] = useState({x: 0, y: 0});
 
   const handleTextChange = (event) => {
     event.preventDefault();
@@ -20,8 +21,16 @@ const Template = ({block, handleUpdateBlocks}) => {
   const handleSaveClick = () => {
     setIsEditing(false);
     if(currentID) {
-      handleUpdateBlocks(currentID, text);
+      handleUpdateBlocks(currentID, text,);
     }
+  };
+
+
+  const handleDragStop = (event, data) => {
+    setPosition({x: data.x, y: data.y});
+  };
+  const handleResizeStop = (event, direction, ref, delta, position) => {
+    setPosition({x: position.x, y: position.y});
   };
 
   useEffect(() => {
@@ -32,8 +41,8 @@ const Template = ({block, handleUpdateBlocks}) => {
   return (
       <Rnd
         default={{
-          x: block.layerx,
-          y: block.layery,
+          x: block.x,
+          y: block.y,
           width: 130,
           height: 55,
         }}
@@ -49,7 +58,7 @@ const Template = ({block, handleUpdateBlocks}) => {
           bottomRight: true,
           bottomLeft: true,
           topLeft: true,
-        }} onDragStop={(e) => console.log(e)} onResizeStop={(e)=> console.log(e)}>
+        }} onDragStop={handleDragStop} onResizeStop={handleResizeStop}>
         <div
           style={{
             backgroundColor: "cyan",
