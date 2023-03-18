@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { useState, useRef } from "react";
 import { Rnd } from "react-rnd";
-import changeText from "../../reducers/text";
+// import changeText from "../../reducers/text";
 
 // const Box = () => (
 //   <div
