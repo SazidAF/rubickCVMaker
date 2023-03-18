@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useState} from "react";
 import { Rnd } from "react-rnd";
+import { View, Text } from "@react-pdf/renderer";
 
 const Template = ({block, handleUpdateBlocks}) => {
   const [text, setText] = useState(block.text);
@@ -61,7 +62,7 @@ const Template = ({block, handleUpdateBlocks}) => {
           bottomLeft: true,
           topLeft: true,
         }} onDragStop={handleDragStop} onResizeStop={handleResizeStop}>
-        <div
+        <View
           style={{
             backgroundColor: "cyan",
             width: "100%",
@@ -70,10 +71,10 @@ const Template = ({block, handleUpdateBlocks}) => {
           {isEditing ? (
             <input type="textbox" value={text} onChange={handleTextChange} style={{width: "400px", height: "40px"}}/>
           ) : (
-            <p onClick={handlePCick}>{text}</p>
+            <Text onClick={handlePCick}>{text}</Text>
           )}
           {isEditing && <button onClick={handleSaveClick}>Save</button>}
-        </div>
+        </View>
       </Rnd>
      
   );

@@ -4,10 +4,8 @@ const cvSchema = mongoose.Schema({
     creator: {type: String, required: true},
     dimensions: [{
         text: String,
-        clientx: Number,
-        clienty: Number,
-        layerx: Number,
-        layery: Number,
+        x: Number,
+        y: Number,
     }]
 
 })
