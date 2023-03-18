@@ -6,7 +6,7 @@ import Auth from './components/Auth/Auth';
 
 const App = () => {
   return (
-    <GoogleOAuthProvider>
+    <GoogleOAuthProvider clientId='26781760471-fpcslbmirjbe7mdthjp8rds8fu7t1t2d.apps.googleusercontent.com'>
       <BrowserRouter>
         <Routes>
           <Route path='/auth' exact Component={Auth} />

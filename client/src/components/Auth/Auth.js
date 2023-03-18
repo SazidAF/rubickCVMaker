@@ -43,8 +43,8 @@ const Auth = () => {
                 type: AUTH,
                 data: {result, token}
             });
-
-            history.push('/');
+            console.log(result);
+            history('/');
         } catch (error) {
             console.log(error);
         }
