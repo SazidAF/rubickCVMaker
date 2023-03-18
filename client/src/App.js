@@ -1,14 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import Home from "./pages";
 
 function App() {
   return (
     <Router>
-      <Switch>
-        {/* <Route exact path="/" component={Home}  /> */}
-      </Switch>
+      <Routes>
+        <Route exact path="/" component={Home}  />
+      </Routes>
     </Router>
   );
 }
