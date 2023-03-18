@@ -8,6 +8,8 @@ import Dashboard from './components/dashboard';
 import Experience 
  from './components/experience';
 import Education from './components/education';
+import Templates from './components/templates';
+import DemoCv from './components/demo';
 const App = () => {
   return (
     <GoogleOAuthProvider clientId='26781760471-fpcslbmirjbe7mdthjp8rds8fu7t1t2d.apps.googleusercontent.com'>
@@ -18,6 +20,8 @@ const App = () => {
           <Route path="/dashboard" element={<Dashboard/>} ></Route>
           <Route path="/experience" element={<Experience/>} ></Route>
           <Route path="/education" element={<Education/>} ></Route>
+          <Route path="/template" element={<Templates/>} ></Route>
+          <Route path="/demo" element={<DemoCv/>} ></Route>
         </Routes>
       </BrowserRouter>
     </GoogleOAuthProvider>

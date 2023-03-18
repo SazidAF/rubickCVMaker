@@ -88,7 +88,7 @@ export const ArrowRight = styled(MdKeyboardArrowRight)`
 
 export const Img = styled.img`
     width: 240px;
-   margin-left: 40px;
+   margin: 40px 40px 40px 40px;
    padding-right: 0;
    border-width: 1px;
    border-style: solid;
