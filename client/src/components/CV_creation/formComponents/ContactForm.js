@@ -96,10 +96,18 @@ const ContactForm = () => {
       {errors.address && touched.address && (
         <p className="error">{errors.address}</p>
       )}
+      <div>
+        <button style={{ backgroundColor: "#E96479" }}>Back</button>
 
-      <button disabled={isSubmitting} type="submit">
-        Submit
-      </button>
+        <button
+          disabled={isSubmitting}
+          type="submit"
+          style={{ backgroundColor: "#7DB9B6" }}
+          to="/demo"
+        >
+          Submit
+        </button>
+      </div>
     </form>
   );
 };

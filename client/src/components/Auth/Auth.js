@@ -47,7 +47,7 @@ const Auth = () => {
                 data: {result, token}
             });
 
-            history('/');
+            history('/dashboard ');
         } catch (error) {
             console.log(error);
         }

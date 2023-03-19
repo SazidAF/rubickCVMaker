@@ -1,6 +1,7 @@
 .formInput {
     /* text-align: center; */
     padding: 5rem 1rem;
+    left: 0%;
 }
 
 .error {
@@ -38,6 +39,7 @@ form {
     width: 95%;
     max-width: 400px;
     margin: 0 auto;
+    left: 0%;
 }
 
 form label {
@@ -77,17 +79,18 @@ input[type="checkbox"] {
 }
 
 button {
-    display: block;
+    display: inline-block;
     margin: 1rem 0;
     padding: 0.35rem 0.5rem;
     background-color: #4299e1;
     color: #1a202c;
     border: none;
     border-radius: 3px;
-    width: 100%;
+    width: 70px;
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
+    margin: 10px;
 }
 
 input.input-error,
