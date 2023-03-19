@@ -4,30 +4,22 @@ import AdvancedForm from "./formComponents/AdvancedForm";
 import ContactForm from "./formComponents/ContactForm";
 import EducationForm from "./formComponents/EducationForm";
 import "./cvForm.css";
+import Navbar from "../InfoForm/Navbar";
+import { Img } from "../Dashboard/Elements";
+import img from '../../images/cv1.png'
 
 const Form = () => {
   const [view, setView] = useState("basic");
 
   return (
     <div className="formInput">
-      <nav>
-        <div>
-          <h3
-            onClick={() => setView("basic")}
-            style={{ color: view === "basic" ? "#E96479" : "" }}
-          >
-            Back
-          </h3>
-        </div>
+      <Navbar/>
+      <div style={{display:"flex"}}>
 
-        <h3
-          onClick={() => setView("contact")}
-          style={{ color: view === "contact" ? "#7DB9B6" : "" }}
-        >
-          Next
-        </h3>
-      </nav>
-      {view === "basic" ? <EducationForm /> : <ContactForm />}
+      {view === "basic" ? <ContactForm /> : < EducationForm/>}
+      <Img src={img}></Img>
+      </div>
+      
     </div>
   );
 };

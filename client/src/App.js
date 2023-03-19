@@ -10,6 +10,7 @@ import Experience
 import Education from './components/education';
 import Templates from './components/templates';
 import DemoCv from './components/demo';
+import Form from './components/CV_creation/form';
 const App = () => {
   return (
     <GoogleOAuthProvider clientId='26781760471-fpcslbmirjbe7mdthjp8rds8fu7t1t2d.apps.googleusercontent.com'>
@@ -22,6 +23,7 @@ const App = () => {
           <Route path="/education" element={<Education/>} ></Route>
           <Route path="/template" element={<Templates/>} ></Route>
           <Route path="/demo" element={<DemoCv/>} ></Route>
+          <Route path="/form" element={<Form/>} ></Route>
         </Routes>
       </BrowserRouter>
     </GoogleOAuthProvider>

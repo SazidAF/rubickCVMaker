@@ -1,6 +1,9 @@
 import React, {useState} from 'react';
 import './demoStyles.css'
 const DemoCv = () => {
+    const [user,setUser]= useState(JSON.parse(localStorage.getItem("profile")));
+    const isUser = user;
+    console.log(user.result);
 
     return (
         <>
@@ -9,11 +12,11 @@ const DemoCv = () => {
     <div id="container">
         <div id="profile">
             <div id="image">
-                <img id="profile-photo" src="http://mnnit.ac.in/ss/images/shashank.jpg" alt="Profile-Image"/>
+                <img id="profile-photo" src={user.result.picture} alt="Profile-Image"/>
                 <a href="#"><i class="fas fa-pen stroke-transparent"></i></a>
             </div>
-            <p id="name">Shashank Srivastava<br/><span id="email">shashank12@mnnit.ac.in</span></p>
-            <p id="designation">Assistant Professor<br/><span id="college">Motilal Nehru National Institute of Technology, Allahabad, Prayagraj, India</span></p>
+            <p id="name">{user.result.name}<br/><span id="email">{user.result.email}</span></p>
+            <p id="designation">Assistant Professor<br/><span id="college">National Institute of Technology</span></p>
             <div id="social-links"><a href="#"><i class="fab fa-facebook-f stroke-transparent"></i></a><a><i class="fab fa-twitter stroke-transparent"></i></a><a><i class="fab fa-linkedin-in stroke-transparent"></i></a><a><i class="fab fa-github stroke-transparent"></i></a></div>
             <a id="edit-intro" href="#"><i class="fas fa-pen-alt blue"></i>&nbsp;&nbsp;Edit Intro</a>
             <hr width="100%"/>
@@ -22,7 +25,7 @@ const DemoCv = () => {
                 <a href="#"><i class="fas fa-pen stroke-transparent-blue"></i></a>
             </div>
             <p id="year-graduation">Expected Year of Graduation<br/><strong>March, 2014</strong></p>
-            <p id="education">Education<br/><strong>Doctorate, Indian Institute of Information Technology-Allahabad</strong></p>
+            <p id="education">Education<br/><strong>Doctorate, Institute of Information Technology</strong></p>
             <p id="more-about">More about me<br/><span>DUGC of Computer Science & Engineering Department</span></p>
             <p id="telephone">Telephone<br/><strong>0532-2271351</strong></p>
             <p id="fax">Fax<br/><strong>+91-532-25453441</strong></p>
