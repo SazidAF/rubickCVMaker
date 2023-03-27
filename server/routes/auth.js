@@ -2,7 +2,6 @@ import express from "express";
 
 import { signIn, signUp } from "../controllers/auth.js";
 
-import { educationInfo } from "../controllers/education.js";
 
 const router = express.Router();
 

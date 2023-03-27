@@ -4,7 +4,7 @@ import { GoogleOAuthProvider } from '@react-oauth/google';
 import "./App.css";
 import Auth from './components/Auth/Auth';
 import Home from './components/home'
-=import CV from './components/CVform/CVform';
+import CV from './components/CVform/CVform';
 import Template from './components/Templates/CV';
 
 import Dashboard from './components/dashboard';

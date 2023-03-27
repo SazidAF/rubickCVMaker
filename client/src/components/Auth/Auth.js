@@ -1,24 +1,24 @@
 import React, { useState } from 'react';
 import { GoogleLogin } from '@react-oauth/google';
 import jwt_decode from 'jwt-decode';
-import { Avatar, Button, Container, Grid, Paper, Typography } from '@material-ui/core';
+import { Avatar, Button, Container, Grid, Paper, Typography } from '@mui/material'
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import LockOutlinedIcon from '@material-ui/icons/LockOpenOutlined';
+// import LockOutlinedIcon from '@mui/icons-material';
 
 import Icon from './Icon';
 // Custom Component for input
 import Input from './Input';
 import { signup, signin } from '../../actions/auth';
-import '../../App.css';
+// import '../../App.css';
 
 import { AUTH } from '../../constants/actionTypes';
 
 // Styles
-import useStyles from './styles';
+// import useStyles from './styles';
 const initialState = { firstName: '', lastName: '', email: '', password: '', confirmPassword: '' };
 const Auth = () => {
-    const classes = useStyles();
+    // const classes = useStyles();
     const [showPassword, setShowPassword] = useState(false);
     const [isSignUp, setIsSignUp] = useState(false);
     const [formData, setFormData] = useState(initialState);

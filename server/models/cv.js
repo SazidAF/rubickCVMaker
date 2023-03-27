@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const cvSchema = mongoose.Schema({
     creator: {type: String, required: true},
-    dimensions: [{
+    blocks: [{
         id: Number,
         text: String,
         x: Number,
